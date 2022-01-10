@@ -19,7 +19,18 @@ export default {
 @import '@/assets/scss/base.scss';
 
 .lol-button {
+  cursor: pointer;
   height: 48px;
-  background-color: $primary;
+  padding: 6px;
+  border: 1px solid #fefefe;
+
+  button {
+    color: white;
+    background: $primary;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: unset;
+  }
 }
 </style>

@@ -5,7 +5,7 @@
       <p>{{ parseStr('mainDescription') }}</p>
     </div>
     <div class="btn-wrap">
-      <LolButton />
+      <LolButton>{{ parseStr('startTest') }}</LolButton>
     </div>
   </div>
 </template>
