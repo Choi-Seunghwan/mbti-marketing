@@ -1,18 +1,25 @@
 <template>
   <div class="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <MainBanner />
+    <Header />
+    <div class="contents">
+      <MainBanner />
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import MainBanner from '@/components/lol/MainBanner.vue';
+import Header from '@/components/lol/Header.vue';
+import Footer from '@/components/lol/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     MainBanner,
-  },
+    Header,
+    Footer
+  }
 };
 </script>
 
@@ -20,5 +27,12 @@ export default {
 @import './assets/scss/base.scss';
 
 .app {
+  display: flex;
+  justify-content: center;
+}
+
+.contents {
+  max-width: 480px;
+  margin-top: 40px;
 }
 </style>
