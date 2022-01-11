@@ -1,5 +1,6 @@
 {
   "mainTitle": "리그 오브 레전드 플레이 유형 테스트",
   "mainDescription": "플레이 스타일에 따라 나의 MBTI 유형을 알아보고, 나에게 맞는 포지션도 추천 받아 보아요!",
-  "startTest": "테스트 시작"
+  "startTest": "테스트 시작",
+  "showAllTypes": "모든 유형 살펴보기"
 }

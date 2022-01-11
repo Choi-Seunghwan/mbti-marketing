@@ -6,6 +6,7 @@
     </div>
     <div class="btn-wrap">
       <LolButton>{{ parseStr('startTest') }}</LolButton>
+      <LolButton theme="secondary">{{ parseStr('showAllTypes') }}</LolButton>
     </div>
   </div>
 </template>

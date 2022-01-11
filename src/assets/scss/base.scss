@@ -1,8 +1,13 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import './border-animation.scss';
+
 $primary: #0bc6e3;
 $secondary: #d0a85c;
 $white: #fff;
 
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: #030608;

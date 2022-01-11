@@ -1,5 +1,5 @@
 <template>
-  <div class="lol-button">
+  <div :class="[theme]" class="lol-button border-draw meet">
     <button @click="$emit('click', e)">
       <slot></slot>
     </button>
@@ -22,7 +22,7 @@ export default {
   cursor: pointer;
   height: 48px;
   padding: 6px;
-  border: 1px solid #fefefe;
+  border: 1px solid rgba(#fefefe, 0.2);
 
   button {
     color: white;
@@ -31,6 +31,18 @@ export default {
     width: 100%;
     height: 100%;
     border: unset;
+  }
+
+  &.primary {
+    button {
+      background: $primary;
+    }
+  }
+
+  &.secondary {
+    button {
+      background: $secondary;
+    }
   }
 }
 </style>
