@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>test</p>
+    <!-- <p>test</p> -->
   </footer>
 </template>
 

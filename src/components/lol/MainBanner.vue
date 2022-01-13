@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { parseStr } from '@/utils/strUtil';
+import { parseStr } from '@/utils';
 import LolButton from './LolButton.vue';
 
 export default {
