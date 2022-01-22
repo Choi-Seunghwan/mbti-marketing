@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <FogWrap />
+    <BackgroundWrap />
     <Header />
     <div class="contents"><router-view /></div>
     <!-- <Footer /> -->
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import FogWrap from '@/components/lol/FogWrap.vue';
+import BackgroundWrap from '@/components/lol/BackgroundWrap.vue';
 import Header from '@/components/lol/Header.vue';
 // import Footer from '@/components/lol/Footer.vue';
 
@@ -17,7 +17,7 @@ export default {
   components: {
     Header,
     // Footer,
-    FogWrap
+    BackgroundWrap
   }
 };
 </script>
@@ -26,12 +26,15 @@ export default {
 @import './assets/scss/base.scss';
 
 .app {
+  height: 100%;
   display: flex;
+  position: relative;
   justify-content: center;
 }
 
 .contents {
-  max-width: 480px;
+  width: 100%;
   margin-top: 40px;
+  margin: 40px 20px;
 }
 </style>

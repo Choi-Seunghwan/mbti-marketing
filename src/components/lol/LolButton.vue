@@ -19,19 +19,23 @@ export default {
 @import '@/assets/scss/base.scss';
 
 .lol-button {
-  font-size: 14px;
+  width: 100%;
   cursor: pointer;
   height: 48px;
-  padding: 6px;
+  padding: 4px;
+  border-radius: 2px;
   border: 1px solid rgba(#fefefe, 0.2);
 
   button {
+    font-size: 15px;
+    font-weight: bold;
     color: white;
     background: $primary;
     cursor: pointer;
     width: 100%;
     height: 100%;
     border: unset;
+    border-radius: 2px;
   }
 
   &.primary {
@@ -43,6 +47,12 @@ export default {
   &.secondary {
     button {
       background: $secondary;
+    }
+  }
+
+  &.tertiary {
+    button {
+      background: $tertiary;
     }
   }
 }

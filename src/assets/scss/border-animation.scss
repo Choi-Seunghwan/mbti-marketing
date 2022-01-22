@@ -1,5 +1,5 @@
 .border-draw {
-  transition: color 0.25s;
+  transition: color 0.2s;
   position: relative;
 
   &::before,
@@ -45,7 +45,7 @@
   &:hover::before {
     border-top-color: cyan; // Make borders visible
     border-right-color: cyan;
-    transition: width 0.25s ease-out,
+    transition: width 0.2s ease-out,
       // Width expands first
       height 0.25s ease-out 0.25s; // And then height
   }

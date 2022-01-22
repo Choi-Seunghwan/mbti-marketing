@@ -1,17 +1,61 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import './border-animation.scss';
+@import './fog-animation.scss';
 
 $primary: #0bc6e3;
 $secondary: #d0a85c;
+$tertiary: #7b6add;
 $white: #fff;
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   background-color: #030608;
   color: $white;
   font-family: 'Noto Sans KR', 'sans-serif';
   margin: 0;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+// tablet-portrait
+@mixin view-tm {
+  @media (min-width: 0px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin view-tp {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+// tablet-landspace
+@mixin view-tl {
+  @media (min-width: 431px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin view-m {
+  @media (min-width: 0px) and (max-width: 430px) {
+    @content;
+  }
 }
