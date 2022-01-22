@@ -2,25 +2,21 @@
   <div class="app">
     <FogWrap />
     <Header />
-    <div class="contents">
-      <MainBanner />
-    </div>
-    <Footer />
+    <div class="contents"><router-view /></div>
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
 import FogWrap from '@/components/lol/FogWrap.vue';
-import MainBanner from '@/components/lol/MainBanner.vue';
 import Header from '@/components/lol/Header.vue';
-import Footer from '@/components/lol/Footer.vue';
+// import Footer from '@/components/lol/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    MainBanner,
     Header,
-    Footer,
+    // Footer,
     FogWrap
   }
 };

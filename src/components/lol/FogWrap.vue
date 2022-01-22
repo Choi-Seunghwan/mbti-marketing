@@ -8,6 +8,8 @@
       <div class="image01"></div>
       <div class="image02"></div>
     </div>
+
+    <img src="@/assets/image/rift.png" />
   </div>
 </template>
 
@@ -22,5 +24,6 @@ export default {};
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 </style>

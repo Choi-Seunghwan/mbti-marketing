@@ -64,7 +64,7 @@
 // Inherits from .draw
 .meet {
   &:hover {
-    color: yellow;
+    color: #fefefe;
   }
 
   // Start ::after in same position as ::before
@@ -75,13 +75,13 @@
 
   // Change colors
   &:hover::before {
-    border-top-color: yellow;
-    border-right-color: yellow;
+    border-top-color: #fefefe;
+    border-right-color: #fefefe;
   }
 
   &:hover::after {
-    border-bottom-color: yellow;
-    border-left-color: yellow;
+    border-bottom-color: #fefefe;
+    border-left-color: #fefefe;
     transition: // Animate height first, then width
       height 0.25s ease-out, width 0.25s ease-out 0.25s;
   }

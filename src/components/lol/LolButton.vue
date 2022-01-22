@@ -19,6 +19,7 @@ export default {
 @import '@/assets/scss/base.scss';
 
 .lol-button {
+  font-size: 14px;
   cursor: pointer;
   height: 48px;
   padding: 6px;
