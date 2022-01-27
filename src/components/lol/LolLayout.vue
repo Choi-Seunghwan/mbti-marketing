@@ -16,6 +16,7 @@ export default {
 .lol-layout {
   max-width: 430px;
   width: 100%;
+  height: 100%;
   padding: 14px;
   margin: 0 auto;
   border: 1px solid rgba(#ebebeb, 0.2);

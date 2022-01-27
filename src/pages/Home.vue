@@ -12,7 +12,7 @@
       <img src="@/assets/image/poro.gif" alt="poro" />
     </div>
     <div class="btn-wrap">
-      <LolButton class="btn">{{ parseStr('startTest') }}</LolButton>
+      <LolButton @click="startHandler" class="btn">{{ parseStr('startTest') }}</LolButton>
       <LolButton class="btn" theme="secondary">{{ parseStr('showAllTypes') }}</LolButton>
       <hr />
       <span>{{ parseStr('learnGame') }}</span>
@@ -27,14 +27,18 @@ import LolButton from '@/components/lol/LolButton.vue';
 import LolLayout from '@/components/lol/LolLayout.vue';
 
 export default {
+  name: 'Home',
   components: { LolButton, LolLayout },
-  mounted() {},
   methods: {
     parseStr,
+    startHandler() {
+      this.$router.push({ name: 'question' });
+    },
     linkHandler() {
       window.open('https://co.lvup.gg/?utm_source=sh_toy&utm_medium=webapp&utm_campaign=lolmbti', '_blank');
     }
-  }
+  },
+  mounted() {}
 };
 </script>
 
