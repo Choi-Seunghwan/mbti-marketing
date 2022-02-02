@@ -25,13 +25,6 @@ export default {
 <style lang="scss">
 @import '@/assets/scss/base.scss';
 
-.app {
-  height: 100%;
-  display: flex;
-  position: relative;
-  justify-content: center;
-}
-
 .contents {
   width: 100%;
   margin-top: 40px;

@@ -1,5 +1,5 @@
 <template>
-  <div :class="[theme]" class="lol-button border-draw meet">
+  <div :class="[theme, disabled ? 'disabled' : '']" class="lol-button border-draw meet">
     <button @click="$emit('click', e)">
       <slot></slot>
     </button>
@@ -10,7 +10,8 @@
 export default {
   name: 'LolButton',
   props: {
-    theme: { type: String, default: 'primary' }
+    theme: { type: String, default: 'primary' },
+    disabled: { type: Boolean, default: false }
   }
 };
 </script>
@@ -53,6 +54,18 @@ export default {
   &.tertiary {
     button {
       background: $tertiary;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    button {
+      font-weight: normal;
+    }
+    &.primary {
+      button {
+        background: rgba($primary, 0.6);
+      }
     }
   }
 }

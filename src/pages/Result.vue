@@ -1,5 +1,7 @@
 <template>
-  <LolLayout class="result">result</LolLayout>
+  <LolLayout class="result">
+    <div></div>
+  </LolLayout>
 </template>
 
 <script>
@@ -7,7 +9,14 @@ import LolLayout from '@/components/lol/LolLayout.vue';
 
 export default {
   name: 'Result',
-  components: { LolLayout }
+  data: () => ({}),
+  computed: {
+    mbtiStr() {
+      return this.$route?.params?.mbti;
+    }
+  },
+  components: { LolLayout },
+  mounted() {}
 };
 </script>
 

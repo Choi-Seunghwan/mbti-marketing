@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     isActivatedNextBtn() {
-      return this.answers?.length >= this.step;
+      return this.step !== this.maxStep && this.answers?.length >= this.step;
     },
     isActivatedPrevBtn() {
       return this.step > 1;

@@ -15,13 +15,19 @@
             class="answer-item"
             @click="answerItemHandler(answer, step)"
           >
-            <LolBasicButton>
+            <LolBasicButton :class="{ selected: answers?.[qIdx] && answers?.[qIdx]?.id === answer?.id }">
               <pre class="answer-item__text">
                 {{ answer.text }}
               </pre>
             </LolBasicButton>
           </div>
         </div>
+      </div>
+      <div v-if="step === maxStep" class="go-result">
+        <hr class="divider" />
+        <LolButton @click="resultBtnHandler" :disabled="questions.length !== answers.length">
+          {{ parseStr('showResult') }}
+        </LolButton>
       </div>
     </LolQuestionsLayout>
   </LolLayout>
@@ -30,12 +36,13 @@
 <script>
 import LolLayout from '@/components/lol/LolLayout.vue';
 import LolQuestionsLayout from '@/components/lol/LolQuestionsLayout.vue';
-import { getLolQuestions, calculateAnswer } from '@/utils';
+import { getLolQuestions, calculateAnswer, parseStr } from '@/utils';
 import LolBasicButton from '@/components/lol/LolBasicButton.vue';
+import LolButton from '@/components/lol/LolButton.vue';
 
 export default {
   name: 'Question',
-  components: { LolLayout, LolQuestionsLayout, LolBasicButton },
+  components: { LolLayout, LolQuestionsLayout, LolBasicButton, LolButton },
   data: () => ({
     step: 1, // non zero index, start 1
     questions: [],
@@ -53,10 +60,12 @@ export default {
     }
   },
   methods: {
+    parseStr,
     getLolQuestions,
     calculateAnswer,
     _calculateAnswer() {
-      const resultStr = this.calculateAnswer(this.answer, this.questions);
+      const resultStr = this.calculateAnswer(this.answers, this.questions);
+      this.$router.push({ name: 'result', params: { mbti: resultStr } });
     },
     goPrevStep() {
       this.step -= 1;
@@ -70,11 +79,11 @@ export default {
       if (prevAnswerIndex > -1) this.answers[prevAnswerIndex] = newAnswer;
       else this.answers?.push(newAnswer);
 
-      if (this.step === this.maxStep) {
-        this._calculateAnswer();
-        return;
-      }
+      if (this.step === this.maxStep) return;
       this.step += 1;
+    },
+    resultBtnHandler() {
+      this._calculateAnswer();
     }
   },
   mounted() {
@@ -102,7 +111,7 @@ export default {
       box-shadow: 2px 2px 2px rgba(#aaa, 0.1);
 
       &__text {
-        font-size: 17px;
+        font-size: 15px;
       }
     }
 
@@ -114,7 +123,7 @@ export default {
 
       .answer-item {
         &__text {
-          font-size: 16px;
+          font-size: 15px;
           line-height: 22px;
           padding: 8px;
         }
@@ -127,6 +136,12 @@ export default {
     height: 1px;
     border: unset;
     border-top: solid 1px #fff;
+  }
+
+  .go-result {
+    .divider {
+      margin: 18px 0;
+    }
   }
 }
 </style>

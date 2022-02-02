@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/pages/Home.vue';
 import Question from '@/pages/Question.vue';
+import Result from '@/pages/Result.vue';
 
 const routes = [
   {
@@ -12,17 +13,20 @@ const routes = [
     path: '/question',
     name: 'question',
     component: Question
+  },
+  {
+    path: '/result/:mbti',
+    name: 'result',
+    component: Result
+  },
+  {
+    path: '/:pathMatch(.*)',
+    redirect: '/'
   }
-  // {
-  //   path: '*',
-  //   name: 'notfound'
-  //   // component: NotFound
-  // }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  // base: process.BASE_URL,
   routes
 });
 
