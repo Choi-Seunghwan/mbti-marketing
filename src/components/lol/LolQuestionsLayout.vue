@@ -1,8 +1,11 @@
 <template>
   <div class="lol-questions-layout">
     <div class="top-wrap">
+      <div class="btn-wrap">
+        <LolArrowButton :disabled="!isActivatedPrevBtn" direction="left" @click="prevBtnHandler" />
+        <LolArrowButton :disabled="!isActivatedNextBtn" direction="right" @click="nextBtnHandler" />
+      </div>
       <LolProgressBar v-bind="{ step, maxStep }" />
-      <!-- <ArrowSvg /> -->
     </div>
     <div class="question-wrap">
       <slot></slot>
@@ -13,13 +16,31 @@
 <script>
 import LolProgressBar from '@/components/lol/LolProgressBar.vue';
 import ArrowSvg from '../common/ArrowSvg.vue';
+import LolArrowButton from './LolArrowButton.vue';
 
 export default {
   name: 'LolQuestionsLayout',
-  components: { LolProgressBar, ArrowSvg },
+  components: { LolProgressBar, ArrowSvg, LolArrowButton },
   props: {
     step: { type: Number, default: 0 },
-    maxStep: { type: Number, default: 0 }
+    maxStep: { type: Number, default: 0 },
+    answers: { type: Array, default: [] }
+  },
+  computed: {
+    isActivatedNextBtn() {
+      return this.answers?.length >= this.step;
+    },
+    isActivatedPrevBtn() {
+      return this.step > 1;
+    }
+  },
+  methods: {
+    prevBtnHandler() {
+      if (this.isActivatedPrevBtn) this.$emit('prevStep');
+    },
+    nextBtnHandler() {
+      if (this.isActivatedNextBtn) this.$emit('nextStep');
+    }
   }
 };
 </script>
@@ -29,6 +50,12 @@ export default {
 
 .lol-questions-layout {
   .top-wrap {
+    margin-bottom: 20px;
+  }
+
+  .btn-wrap {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
   }
 }

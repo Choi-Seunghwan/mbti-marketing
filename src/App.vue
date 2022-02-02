@@ -3,27 +3,27 @@
     <BackgroundWrap />
     <Header />
     <div class="contents"><router-view /></div>
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
 <script>
 import BackgroundWrap from '@/components/lol/BackgroundWrap.vue';
 import Header from '@/components/lol/Header.vue';
-// import Footer from '@/components/lol/Footer.vue';
+import Footer from '@/components/lol/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
-    // Footer,
+    Footer,
     BackgroundWrap
   }
 };
 </script>
 
 <style lang="scss">
-@import './assets/scss/base.scss';
+@import '@/assets/scss/base.scss';
 
 .app {
   height: 100%;

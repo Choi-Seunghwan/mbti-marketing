@@ -2,9 +2,10 @@
   <svg
     :width="width"
     :height="height"
+    :fill="fill"
+    :stroke="fill"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 100 100"
-    class="style__Arrow-llbdtx-2 dCeYdP"
   >
     <path
       d="M3.47 53.47A3.47 3.47 0 116.94 50a3.47 3.47 0 01-3.47 3.47zM26.24 46.53h60.47l-23-23 4.91-4.91L100 50 68.62 81.38l-4.91-4.91 23-23H26.24z"
@@ -17,7 +18,8 @@ export default {
   name: 'ArrowSvg',
   props: {
     width: { default: 28 },
-    height: { default: 28 }
+    height: { default: 28 },
+    fill: { default: '#0bc6e3' }
   }
 };
 </script>

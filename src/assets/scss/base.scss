@@ -1,6 +1,10 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import './border-animation.scss';
 @import './fog-animation.scss';
+
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url('@/assets/font/NotoSansKr-Medium.otf');
+}
 
 $primary: #0bc6e3;
 $secondary: #d0a85c;
@@ -9,6 +13,7 @@ $white: #fff;
 
 * {
   box-sizing: border-box;
+  font-family: 'NotoSansKR';
 }
 
 html {
@@ -25,13 +30,24 @@ body {
   height: 100%;
   background-color: #030608;
   color: $white;
-  font-family: 'Noto Sans KR', 'sans-serif';
+  font-family: 'NotoSansKR';
   margin: 0;
   overflow-x: hidden;
 }
 
 p {
   margin: 0;
+}
+
+a {
+  color: #eee;
+  &:visited {
+    color: #eee;
+  }
+}
+
+pre {
+  white-space: pre-line;
 }
 
 // tablet-portrait

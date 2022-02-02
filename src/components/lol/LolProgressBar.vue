@@ -37,7 +37,7 @@ export default {
     top: 0;
     height: 4px;
     border-radius: 6px;
-    transition: width ease-in-out 1s;
+    transition: width ease-in-out 0.3s;
   }
 }
 </style>
