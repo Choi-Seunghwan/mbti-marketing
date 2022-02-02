@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "target": "esnext"
   }
 }

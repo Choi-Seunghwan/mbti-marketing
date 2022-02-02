@@ -14,3 +14,17 @@ export type question = {
 };
 
 export type questions = question[];
+
+export type champ = {
+  name: string;
+  img: string;
+};
+
+export type mbtiType = {
+  id: number;
+  type: string;
+  nickname: string;
+  mainDesc: string;
+  desc: string[];
+  champs: champ[];
+};

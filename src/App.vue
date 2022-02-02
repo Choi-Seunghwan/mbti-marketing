@@ -30,5 +30,6 @@ export default {
   margin-top: 40px;
   margin: 40px 20px;
   min-height: 600px;
+  padding: 0 10px;
 }
 </style>

@@ -1,12 +1,20 @@
 import stringJson from '@/data/string.json';
 import lolQuestions from '@/data/lol-questions.json';
+import lolMbti from '@/data/lol-mbti.json';
+import { mbtiType } from '@/types';
 
-export const parseStr = key => {
+export const parseStr = (key: string) => {
   return stringJson[key] || String(key);
 };
 
 export const getLolQuestions = () => {
   return lolQuestions;
+};
+
+export const getTypeInfo = (type: string): mbtiType => {
+  const types: mbtiType[] = lolMbti;
+  const typeIdx = types?.findIndex(t => t?.type === type);
+  return types[typeIdx];
 };
 
 export const calculateAnswer = (answers, questions) => {
