@@ -9,17 +9,14 @@
       </div>
       <pre class="type-info__main-desc">{{ typeMainDesc }}</pre>
     </div>
-    <hr class="divider small" />
+    <!-- <hr class="divider small" /> -->
     <div class="type-champs">
-      <div class="champ-item" v-for="(champ, idx) in typeChampList" :key="idx">
-        <img class="champ-item__img" :src="champ.img" />
-        <div class="champ-item__name">
-          <span class="champ-item__name__text">{{ champ.name }}</span>
-        </div>
-      </div>
+      <h4 class="type-champs__text">나와 성향이 닮은 챔피언</h4>
+      <ChampList :champList="typeChampList" />
     </div>
     <hr class="divider" />
     <div class="type-desc">
+      <h4 class="type-desc__text">유형 분석</h4>
       <ul class="type-desc__wrap">
         <li class="type-desc__item" v-for="(desc, idx) in typeDescList" :key="idx">- {{ desc }}</li>
       </ul>
@@ -30,10 +27,11 @@
 <script>
 import { getTypeInfo } from '@/utils/index.ts';
 import LolLayout from '@/components/lol/LolLayout.vue';
+import ChampList from '@/components/lol/ChampList.vue';
 
 export default {
   name: 'Result',
-  components: { LolLayout },
+  components: { LolLayout, ChampList },
   data: () => ({ typeInfo: {} }),
   computed: {
     typeStr() {
@@ -76,7 +74,7 @@ export default {
 
     &__nickname-wrap {
       display: flex;
-      border-bottom: 1px solid #fff;
+      border-bottom: 3px solid $secondary;
       margin-bottom: 20px;
     }
     &__text {
@@ -95,64 +93,34 @@ export default {
   }
 
   .type-champs {
-    display: flex;
-    width: 100%;
-    padding-bottom: 6px;
-    overflow-x: scroll;
-    gap: 8px;
-    scroll-snap-type: x mandatory;
+    margin-top: 42px;
 
-    .champ-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 180px;
-      height: 200px;
-      position: relative;
-      scroll-snap-align: center;
-      scroll-snap-align: center;
-      border: 2px solid #68542e;
-      border-radius: 8px;
-
-      &__name {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        bottom: 4px;
-        left: 6px;
-        z-index: 1;
-        height: 28px;
-        background: rgba(0, 102, 128, 0.6);
-        width: 164px;
-        padding-left: 6px;
-        border-radius: 0 0 6px 6px;
-
-        &__text {
-          font-size: 14px;
-        }
-      }
-      &__img {
-        width: 176px;
-        height: 200px;
-        object-fit: cover;
-        border: 6px solid rgba(#fff, 0);
-        border-radius: 12px;
-      }
+    &__text {
+      font-size: 14px;
+      color: #fff;
+      width: fit-content;
+      border-bottom: solid 3px $primary;
     }
   }
 
   .type-desc {
-    color: #eee;
-    border: 1px solid rgba(#fff, 0.4);
-    padding: 8px;
-    border-radius: 4px;
-    background: rgba(#eee, 0.1);
-    backdrop-filter: blur(1px);
+    &__text {
+      font-size: 14px;
+      color: #fff;
+      width: fit-content;
+      border-bottom: solid 3px $primary;
+    }
 
     &__wrap {
       display: flex;
       flex-direction: column;
       gap: 8px;
+      color: #eee;
+      border: 1px solid rgba(#fff, 0.4);
+      padding: 8px;
+      border-radius: 4px;
+      background: rgba(#eee, 0.1);
+      backdrop-filter: blur(1px);
     }
     &__item {
       font-size: 14px;

@@ -1,7 +1,7 @@
 <template>
   <header :class="{ show: show }" class="header">
     <a class="logo" @click="logoHandler">
-      <img class="logo__img" src="@/assets/image/poro-cute.png" alt="poro-logo" />
+      <img class="logo__img" src="/img/poro-cute.png" alt="poro-logo" />
       <span class="logo__text">LoL MBTI</span>
     </a>
   </header>

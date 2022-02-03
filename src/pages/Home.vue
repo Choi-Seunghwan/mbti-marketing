@@ -3,13 +3,13 @@
     <div class="title-wrap">
       <h3>
         <em>{{ parseStr('lol') }}</em>
-        {{ parseStr('mainTitle') }}
+        <span>{{ parseStr('mainTitle') }}</span>
       </h3>
       <p>{{ parseStr('mainDescription1') }}</p>
       <p>{{ parseStr('mainDescription2') }}</p>
     </div>
     <div class="poro-wrap">
-      <img src="@/assets/image/poro.gif" alt="poro" />
+      <img src="/img/poro.gif" alt="poro" />
     </div>
     <div class="btn-wrap">
       <LolButton @click="startHandler" class="btn">{{ parseStr('startTest') }}</LolButton>
@@ -63,10 +63,17 @@ export default {
     justify-content: center;
     align-items: center;
     > h3 {
+      display: flex;
+      align-items: center;
       font-size: 20px;
       > em {
         font-style: normal;
         font-size: 26px;
+      }
+      > span {
+        border-bottom: 2px solid $primary;
+        margin-left: 4px;
+        color: #fff;
       }
     }
   }

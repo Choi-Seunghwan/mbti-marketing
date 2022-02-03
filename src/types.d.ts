@@ -17,7 +17,7 @@ export type questions = question[];
 
 export type champ = {
   name: string;
-  img: string;
+  code: string;
 };
 
 export type mbtiType = {

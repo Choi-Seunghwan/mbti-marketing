@@ -9,7 +9,7 @@
       <div class="image02"></div>
     </div>
 
-    <img class="rift-img" src="@/assets/image/rift.png" alt="rift" />
+    <img class="rift-img" src="/img/rift.png" alt="rift" />
   </div>
 </template>
 

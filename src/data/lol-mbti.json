@@ -13,7 +13,15 @@
       "합류? 그건 그냥 나 대신 맞아 줄 사람이 필요해서 하는 것 뿐",
       "협곡의 도도한 트롤러"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Viktor", "name": "빅토르" },
+      { "code": "Swain", "name": "스웨인" },
+      { "code": "Zed", "name": "제드" },
+      { "code": "Nasus", "name": "나서스" },
+      { "code": "Sylas", "name": "사일러스" },
+      { "code": "Kassadin", "name": "카사딘" },
+      { "code": "Diana", "name": "다이애나" }
+    ]
   },
   {
     "id": 2,
@@ -29,7 +37,14 @@
       "커뮤니티에 공략글을 쓰는 사람들이 이 유형일 확률이 높음",
       "이미 뇌지컬은 갖춰진 유형. 만약 티어가 낮다면, 안타깝게도 당신은 피지컬이 딸린다..."
     ],
-    "champs": []
+    "champs": [
+      { "code": "Singed", "name": "신지드" },
+      { "code": "Velkoz", "name": "벨코즈" },
+      { "code": "TwistedFate", "name": "트위스트 페이트" },
+      { "code": "KogMaw", "name": "코그모" },
+      { "code": "Heimerdinger", "name": "하이머딩거" },
+      { "code": "Orianna", "name": "오리아나" }
+    ]
   },
   {
     "id": 3,
@@ -43,7 +58,14 @@
       "이들의 판단과 오더는 대체로 옳을 수도 있다. 그러나, 굉장한 승부욕과 직설적인 화법 때문에 팀원들에게 정치 아닌 정치를 하게 될 수도 있다",
       "엔터키를 빼 놓고 게임하자. 그게 나에게도, 우리 팀원에게도 좋은 일이다"
     ],
-    "champs": []
+    "champs": [
+      { "code": "MissFortune", "name": "미스 포츈" },
+      { "code": "Aatrox", "name": "아트룩스" },
+      { "code": "Mordekaiser", "name": "모데카이저" },
+      { "code": "Katarina", "name": "카타리나" },
+      { "code": "Cassiopeia", "name": "카시오페아" },
+      { "code": "Qiyana", "name": "키아나" }
+    ]
   },
   {
     "id": 4,
@@ -57,7 +79,14 @@
       "또한 그들 스스로의 자신감에서 오는 강인한 멘탈은 단단한 팀워크의 기반이 되기도 함",
       "모두가 No 를 외칠 때, 당당히 Yes 를 외칠 수 있는 유형. 모두가 포기한 상황에서도 끝까지 포기 하지 않는 영웅적인 모습을 보여주며, 그들이 킬을 낸 순간이 대역전극의 시작이다"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Jayce", "name": "제이스" },
+      { "code": "TahmKench", "name": "탐 켄치" },
+      { "code": "Rumble", "name": "럼블" },
+      { "code": "Shaco", "name": "샤코" },
+      { "code": "Zoe", "name": "조이" },
+      { "code": "Ekko", "name": "에코" }
+    ]
   },
   {
     "id": 5,
@@ -75,7 +104,13 @@
       "사람에게 밝고 긍정적인 면만 보려는 성향 때문에 팀게임에서 스트레스를 많이 받는 편. 주로 칼바람을 즐기는 유저가 많다",
       "타인에 대한 이타적인 성향이나 공감 능력 때문에 애초에 다른 사람들과 싸우는 PvP 게임에 어울리는 성향은 아니지만, 아군과의 협력을 통해 팀을 승리로 이끄는 것 자체에는 재미를 많이 느끼는 편"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Soraka", "name": "소라카" },
+      { "code": "Senna", "name": "세나" },
+      { "code": "Karma", "name": "카르마" },
+      { "code": "Yone", "name": "요네" },
+      { "code": "Kaisa", "name": "카이사" }
+    ]
   },
   {
     "id": 6,
@@ -90,7 +125,14 @@
       "팀원들이 칭찬해주면 많이 좋아함. 팀워크 중시!",
       "특유의 조심스러움과 섬세함을 잘 활용하면 다른 라인에서도 충분히 활약할 수 있다! 화이팅!"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Amumu", "name": "아무무" },
+      { "code": "Morgana", "name": "모르가나" },
+      { "code": "Syndra", "name": "신드라" },
+      { "code": "Maokai", "name": "마오카이" },
+      { "code": "Riven", "name": "리븐" },
+      { "code": "Taliyah", "name": "탈리야" }
+    ]
   },
   {
     "id": 7,
@@ -105,7 +147,13 @@
       "사람들과 얘기하는 걸 좋아하고, 롤하면서 팀원 칭찬 봇이 됨",
       "팀을 응원하는 따뜻한 팀워크를 발휘함"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Leona", "name": "레오나" },
+      { "code": "Karthus", "name": "카서스" },
+      { "code": "Nami", "name": "나미" },
+      { "code": "Illaoi", "name": "일라오이" },
+      { "code": "Ashe", "name": "애쉬" }
+    ]
   },
   {
     "id": 8,
@@ -121,7 +169,13 @@
       "그러나 너무 합류 위주의 플레이를 할 때가 있고, 이 때문에 팀운에 따라 본인의 승패도 갈리게 되는 경우가 있음",
       "자유로운 사고를 갖고 있으며, 팀원이 뉴메타를 하거나, 팀의 조합이 맞지 않아도 딱히 개의치 않음"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Lux", "name": "럭스" },
+      { "code": "Lulu", "name": "룰루" },
+      { "code": "Nunu", "name": "누누와 윌럼프" },
+      { "code": "Teemo", "name": "티모" },
+      { "code": "Tristana", "name": "트리스티나" }
+    ]
   },
   {
     "id": 9,
@@ -137,7 +191,15 @@
       "무지성으로 합류해 싸우기보다는 본인이 생각한 각이 나왔을 때에만 합류해서 싸움",
       "무조건적으로 팀원에게 호응해 주진 않으며 본인의 판단이 우선이다"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Irelia", "name": "이렐리아" },
+      { "code": "MasterYi", "name": "마스터 이" },
+      { "code": "Varus", "name": "바루스" },
+      { "code": "Vayne", "name": "베인" },
+      { "code": "Pantheon", "name": "판테온" },
+      { "code": "Nautilus", "name": "노틸러스" },
+      { "code": "Malphite", "name": "말파이트" }
+    ]
   },
   {
     "id": 10,
@@ -151,7 +213,13 @@
       "게임도 안정적으로 풀어가고, 팀워크도 좋은 편이나, 본인 스스로는 하고 싶은 게 있어도 팀에 맞추느라 하지 못하는 경우가 있을 수 있음",
       "뛰어난 관찰력, 침착함 등 이러한 본인의 강점들을 믿고 서포터 외에 다른 라인에도 도전해보자!"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Nami", "name": "나미" },
+      { "code": "Janna", "name": "잔나" },
+      { "code": "Anivia", "name": "애니비아" },
+      { "code": "Blitzcrank", "name": "블리츠크랭크" },
+      { "code": "Poppy", "name": "뽀삐" }
+    ]
   },
   {
     "id": 11,
@@ -169,22 +237,12 @@
       "파이팅 넘치는 꼰대..."
     ],
     "champs": [
-      {
-        "name": "가렌",
-        "img": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blte41a162aed9339b7/5db05fc60b39e86c2f83dc0d/RiotX_ChampionList_garen.jpg?quality=90&width=300"
-      },
-      {
-        "name": "피오라",
-        "img": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt935dd149b2617ac8/5db05fbcdc674266df3d5d36/RiotX_ChampionList_fiora.jpg?quality=90&width=300"
-      },
-      {
-        "name": "다리우스",
-        "img": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt38b52be4a2cb1004/5db05fb19481396d6bdd01ac/RiotX_ChampionList_darius.jpg?quality=90&width=300"
-      },
-      {
-        "name": "자르반 4세",
-        "img": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt5898626d7016d222/5db05fcfdc674266df3d5d3c/RiotX_ChampionList_jarvaniv.jpg?quality=90&width=300"
-      }
+      { "code": "Darius", "name": "다리우스" },
+      { "code": "Garen", "name": "가렌" },
+      { "code": "Fiora", "name": "피오라" },
+      { "code": "JarvanIV", "name": "자르반 4세" },
+      { "code": "Urgot", "name": "우르곳" },
+      { "code": "Sejuani", "name": "세주아니" }
     ]
   },
   {
@@ -200,7 +258,13 @@
       "팀원에게 호응을 잘 하며, 이 유형들이 한타에 빠질 일은 절대 없음. 그게 사려야 하는 상황이었을지라도...",
       "게임 중 채팅 하기 전에 생각을 많이 하며, 다른 사람들도 마찬가지로 매너 채팅 해주길 바람"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Braum", "name": "브라움" },
+      { "code": "Alistar", "name": "알리스타" },
+      { "code": "Galio", "name": "갈리오" },
+      { "code": "Seraphine", "name": "세라핀" },
+      { "code": "Shyvana", "name": "쉬바나" }
+    ]
   },
   {
     "id": 13,
@@ -217,7 +281,14 @@
       "게임 하면서 혼잣말로 욕 많이 함",
       "다양한 분야에 관심이 많으며, 롤도 그 다양하게 경험해 보는 취미 중 하나"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Yasuo", "name": "야스오" },
+      { "code": "Akali", "name": "아칼리" },
+      { "code": "Talon", "name": "탈론" },
+      { "code": "Ornn", "name": "오른" },
+      { "code": "Pyke", "name": "파이크" },
+      { "code": "Tryndamere", "name": "트린다미어" }
+    ]
   },
   {
     "id": 14,
@@ -231,7 +302,13 @@
       "팀원들의 채팅에 멘탈이 쉽게 흔들릴 수 있으므로 채팅 기능을 끄고 게임 하는 것도 추천함",
       "책임이 막중한 걸 잘 못 견뎌하며 성향 상 미드나 탑 같은 라인 보다는 서폿을 선호함"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Sona", "name": "소나" },
+      { "code": "Jhin", "name": "진" },
+      { "code": "Annie", "name": "애니" },
+      { "code": "Gnar", "name": "나르" },
+      { "code": "Gwen", "name": "그웬" }
+    ]
   },
   {
     "id": 15,
@@ -245,7 +322,13 @@
       "게임 내 매너를 지키는 건 당연한 일이지만, ESTP들을 자극하지 않기 위해서라도 팀원에게 욕을 해선 안된다",
       "한번 수틀리면 모든 템 다 팔고 바로 포탑으로 돌진!"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Ezreal", "name": "이즈리얼" },
+      { "code": "Vi", "name": "바이" },
+      { "code": "Sett", "name": "세트" },
+      { "code": "Evelynn", "name": "이블린" },
+      { "code": "Graves", "name": "그레이브즈" }
+    ]
   },
   {
     "id": 16,
@@ -260,6 +343,13 @@
       "롤을 몸으로 익히는 타입",
       "본능적인 플레이를 하며 다소 위험한 상황에서도 계산하지 않고 본능적인 컨트롤로 킬을 먹음"
     ],
-    "champs": []
+    "champs": [
+      { "code": "Jinx", "name": "징크스" },
+      { "code": "Yuumi", "name": "유미" },
+      { "code": "Gragas", "name": "그라가스" },
+      { "code": "Ahri", "name": "아리" },
+      { "code": "Udyr", "name": "우디르" },
+      { "code": "Samira", "name": "사미라" }
+    ]
   }
 ]
