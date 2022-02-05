@@ -11,27 +11,32 @@
     </div>
     <!-- <hr class="divider small" /> -->
     <div class="type-champs">
-      <h4 class="type-champs__text">나와 성향이 닮은 챔피언</h4>
+      <HeadingText class="type-champs__text">{{ parseStr('typeChamps') }}</HeadingText>
       <ChampList :champList="typeChampList" />
     </div>
     <hr class="divider" />
     <div class="type-desc">
-      <h4 class="type-desc__text">유형 분석</h4>
+      <HeadingText class="type-desc__text">{{ parseStr('typeAnalyze') }}</HeadingText>
       <ul class="type-desc__wrap">
         <li class="type-desc__item" v-for="(desc, idx) in typeDescList" :key="idx">- {{ desc }}</li>
       </ul>
     </div>
+    <hr class="divider" />
+    <LolButton @click="allHandler" class="btn" theme="secondary">{{ parseStr('showAllTypes') }}</LolButton>
+    <LolButton @click="linkHandler" class="btn" theme="tertiary">{{ parseStr('coachLearnGame') }}</LolButton>
   </LolLayout>
 </template>
 
 <script>
-import { getTypeInfo } from '@/utils/index.ts';
+import { goMarketingLink, getTypeInfo, parseStr } from '@/utils/index.ts';
 import LolLayout from '@/components/lol/LolLayout.vue';
 import ChampList from '@/components/lol/ChampList.vue';
+import LolButton from '@/components/lol/LolButton.vue';
+import HeadingText from '@/components/lol/HeadingText.vue';
 
 export default {
   name: 'Result',
-  components: { LolLayout, ChampList },
+  components: { LolLayout, ChampList, LolButton, HeadingText },
   data: () => ({ typeInfo: {} }),
   computed: {
     typeStr() {
@@ -51,7 +56,14 @@ export default {
     }
   },
   methods: {
+    parseStr,
     getTypeInfo,
+    allHandler() {
+      this.$router.push({ name: 'all' });
+    },
+    linkHandler() {
+      goMarketingLink();
+    },
     _getTypeInfo(type) {
       return this.getTypeInfo(type);
     }
@@ -74,6 +86,8 @@ export default {
 
     &__nickname-wrap {
       display: flex;
+      justify-content: center;
+      align-items: center;
       border-bottom: 3px solid $secondary;
       margin-bottom: 20px;
     }
@@ -96,19 +110,11 @@ export default {
     margin-top: 42px;
 
     &__text {
-      font-size: 14px;
-      color: #fff;
-      width: fit-content;
-      border-bottom: solid 3px $primary;
     }
   }
 
   .type-desc {
     &__text {
-      font-size: 14px;
-      color: #fff;
-      width: fit-content;
-      border-bottom: solid 3px $primary;
     }
 
     &__wrap {
@@ -120,7 +126,7 @@ export default {
       padding: 8px;
       border-radius: 4px;
       background: rgba(#eee, 0.1);
-      backdrop-filter: blur(1px);
+      backdrop-filter: blur(12px);
     }
     &__item {
       font-size: 14px;

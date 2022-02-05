@@ -9,7 +9,9 @@
 $primary: #0bc6e3;
 $secondary: #d0a85c;
 $tertiary: #7b6add;
+$quaternary: #006680;
 $white: #fff;
+$black: #191919;
 
 * {
   box-sizing: border-box;
@@ -55,8 +57,33 @@ body {
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
 p {
   margin: 0;
+}
+
+input,
+textarea {
+  background: rgba(#fff, 0.6);
+  border: unset;
+  color: #191919;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 4px 10px;
+
+  &:focus {
+    border: unset;
+  }
+  &:focus-visible {
+    border: unset;
+    outline: unset;
+  }
+}
+textarea {
+  resize: none;
 }
 
 a {

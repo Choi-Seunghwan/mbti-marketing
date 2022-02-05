@@ -130,7 +130,8 @@ export default {
     margin-top: 16px;
     border: unset;
     border-top: solid 1px #fff;
-    width: 74%;
+    width: 100%;
+    opacity: 0.8;
   }
 
   .champ-item-holder {

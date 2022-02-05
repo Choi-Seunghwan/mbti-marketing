@@ -13,8 +13,8 @@
     </div>
     <div class="btn-wrap">
       <LolButton @click="startHandler" class="btn">{{ parseStr('startTest') }}</LolButton>
-      <LolButton class="btn" theme="secondary">{{ parseStr('showAllTypes') }}</LolButton>
-      <hr />
+      <LolButton @click="allHandler" class="btn" theme="secondary">{{ parseStr('showAllTypes') }}</LolButton>
+      <hr class="divider" />
       <span>{{ parseStr('learnGame') }}</span>
       <LolButton @click="linkHandler" class="btn" theme="tertiary">{{ parseStr('coachLearnGame') }}</LolButton>
     </div>
@@ -22,7 +22,8 @@
 </template>
 
 <script>
-import { parseStr } from '@/utils';
+import api from '@/api';
+import { parseStr, goMarketingLink } from '@/utils';
 import LolButton from '@/components/lol/LolButton.vue';
 import LolLayout from '@/components/lol/LolLayout.vue';
 
@@ -34,11 +35,17 @@ export default {
     startHandler() {
       this.$router.push({ name: 'question' });
     },
+    allHandler() {
+      this.$router.push({ name: 'all' });
+    },
     linkHandler() {
-      window.open('https://co.lvup.gg/?utm_source=sh_toy&utm_medium=webapp&utm_campaign=lolmbti', '_blank');
+      goMarketingLink();
     }
   },
-  mounted() {}
+  async mounted() {
+    const r = await api.get({ path: '/' });
+    console.log('@@@', r);
+  }
 };
 </script>
 
@@ -62,10 +69,13 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
+
     > h3 {
       display: flex;
       align-items: center;
       font-size: 20px;
+      margin-bottom: 30px;
       > em {
         font-style: normal;
         font-size: 26px;

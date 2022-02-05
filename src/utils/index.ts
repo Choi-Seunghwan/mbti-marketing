@@ -2,6 +2,16 @@ import stringJson from '@/data/string.json';
 import lolQuestions from '@/data/lol-questions.json';
 import lolMbti from '@/data/lol-mbti.json';
 import { mbtiType } from '@/types';
+import moment from 'moment';
+
+export const goMarketingLink = () => {
+  window.open('https://co.lvup.gg/?utm_source=sh_toy&utm_medium=webapp&utm_campaign=lolmbti', '_blank');
+};
+
+export const formatDatetime = datetime => {
+  const date = moment(Number(datetime)).format('YYYY/MM/DD HH:mm');
+  return date;
+};
 
 export const parseStr = (key: string) => {
   return stringJson[key] || String(key);
@@ -9,6 +19,19 @@ export const parseStr = (key: string) => {
 
 export const getLolQuestions = () => {
   return lolQuestions;
+};
+
+export const getChampImgSrc = champCode => {
+  return `/img/champ${champCode}.jpeg`;
+};
+
+export const getSubChampImgSrc = champCode => {
+  return `/img/champ-sub/${champCode}.png`;
+};
+
+export const getAllTypes = (): mbtiType[] => {
+  const types: mbtiType[] = lolMbti;
+  return types;
 };
 
 export const getTypeInfo = (type: string): mbtiType => {

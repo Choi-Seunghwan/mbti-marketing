@@ -1,11 +1,13 @@
 {
   "lol": "리그 오브 레전드",
-  "mainTitle": "MBTI 유형",
-  "mainDescription1": "리그 오브 레전드 플레이 스타일을 통해,",
-  "mainDescription2": "나의 MBTI 유형을 알아 보아요",
+  "mainTitle": "MBTI 분석기",
+  "mainDescription1": "플레이 스타일을 통해 나의 MBTI 유형 알아보고,",
+  "mainDescription2": "유형 별 특징을 확인해 보아요!",
   "startTest": "테스트 시작",
   "showAllTypes": "모든 유형 살펴보기",
   "learnGame": "이제는 게임을 배운다...?",
   "coachLearnGame": "전문 코치에게 게임 배우기",
-  "showResult": "결과 보기"
+  "showResult": "결과 보기",
+  "typeChamps": "나와 성향이 닮은 챔피언",
+  "typeAnalyze": "유형 분석"
 }

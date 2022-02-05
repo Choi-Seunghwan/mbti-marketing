@@ -38,9 +38,9 @@
       "이미 뇌지컬은 갖춰진 유형. 만약 티어가 낮다면, 안타깝게도 당신은 피지컬이 딸린다..."
     ],
     "champs": [
+      { "code": "TwistedFate", "name": "트위스트 페이트" },
       { "code": "Singed", "name": "신지드" },
       { "code": "Velkoz", "name": "벨코즈" },
-      { "code": "TwistedFate", "name": "트위스트 페이트" },
       { "code": "KogMaw", "name": "코그모" },
       { "code": "Heimerdinger", "name": "하이머딩거" },
       { "code": "Orianna", "name": "오리아나" }

@@ -34,20 +34,25 @@ export default {
   cursor: pointer;
   backdrop-filter: blur(4px);
 
+  &.default {
+  }
+
+  &.dark {
+    background: rgba(#222, 0.8);
+    border: solid 1px #eee;
+  }
+
   &:hover {
     background: rgba(#eee, 0.2);
     border: solid 1px #fff;
+    &.dark {
+      background: rgba(#222, 0.6);
+    }
   }
 
   &.selected {
     background: rgba(#eee, 0.4);
     border: solid 1px #fff;
-  }
-
-  &.default {
-  }
-
-  &.dark {
   }
 }
 </style>

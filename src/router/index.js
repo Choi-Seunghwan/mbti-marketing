@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/pages/Home.vue';
 import Question from '@/pages/Question.vue';
 import Result from '@/pages/Result.vue';
+import All from '@/pages/All.vue';
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/result/:mbti',
     name: 'result',
     component: Result
+  },
+  {
+    path: '/all',
+    name: 'all',
+    component: All
   },
   {
     path: '/:pathMatch(.*)',
