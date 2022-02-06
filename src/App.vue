@@ -1,4 +1,7 @@
 <template>
+  <metainfo>
+    <template v-slot:title="{ content }">리그 오브 레전드 | MBTI 분석{{ content }}</template>
+  </metainfo>
   <div class="app">
     <BackgroundWrap />
     <Header />
@@ -26,6 +29,11 @@ export default {
     Footer,
     BackgroundWrap,
     AlarmBar
+  },
+  metaInfo() {
+    return {
+      title: ''
+    };
   },
   mounted() {
     this.$nextTick(() => {

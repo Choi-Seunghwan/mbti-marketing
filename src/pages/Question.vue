@@ -83,6 +83,12 @@ export default {
       this.step += 1;
     },
     answerItemHandler(item, step) {
+      this.$gtag.event('click_answer_item', {
+        event_category: 'question',
+        event_label: 'answer',
+        value: String(step) + String(item.id)
+      });
+
       const newAnswer = { ...item, step };
       const prevAnswerIndex = this.answers?.findIndex(answer => answer?.step === step);
       if (prevAnswerIndex > -1) this.answers[prevAnswerIndex] = newAnswer;
@@ -94,6 +100,11 @@ export default {
     resultBtnHandler() {
       this._calculateAnswer();
     }
+  },
+  metaInfo() {
+    return {
+      title: ' | 테스트'
+    };
   },
   mounted() {
     this.analyze = false;
@@ -122,6 +133,7 @@ export default {
 
       &__text {
         font-size: 15px;
+        text-align: center;
       }
     }
 
@@ -173,7 +185,6 @@ export default {
     }
     > img {
       width: 160px;
-      height: fit-content;
     }
   }
 }

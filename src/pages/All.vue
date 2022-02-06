@@ -55,6 +55,11 @@ export default {
       }
     }
   },
+  metaInfo() {
+    return {
+      title: ' | 모든 유형 알아보기'
+    };
+  },
   mounted() {
     this.types = this.getAllTypes();
   }
@@ -145,14 +150,24 @@ export default {
     }
   }
 
-  @media (min-width: 0px) and (max-width: 445px) {
+  @media (min-width: 0px) and (max-width: 410px) {
     .all-types {
       gap: 6px;
       .type-item {
-        width: 64px;
-        height: 64px;
+        width: 70px;
+        height: 70px;
       }
     }
   }
+
+  //   @media (min-width: 0px) and (max-width: 445px) {
+  //   .all-types {
+  //     gap: 6px;
+  //     .type-item {
+  //       width: 64px;
+  //       height: 64px;
+  //     }
+  //   }
+  // }
 }
 </style>

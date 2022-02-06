@@ -44,7 +44,6 @@ export default {
 
   .arrow {
     width: 16px;
-    height: fit-content;
   }
 
   &.disabled {

@@ -18,7 +18,8 @@ const routes = [
   {
     path: '/result/:mbti',
     name: 'result',
-    component: Result
+    component: Result,
+    props: true
   },
   {
     path: '/all',

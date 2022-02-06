@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import { useMeta } from 'vue-meta';
+import { computed } from 'vue';
 import { goMarketingLink, getTypeInfo, parseStr } from '@/utils/index.ts';
 import LolLayout from '@/components/lol/LolLayout.vue';
 import ChampList from '@/components/lol/ChampList.vue';
@@ -37,6 +39,11 @@ import HeadingText from '@/components/lol/HeadingText.vue';
 export default {
   name: 'Result',
   components: { LolLayout, ChampList, LolButton, HeadingText },
+  props: {
+    mbti: {
+      default: ''
+    }
+  },
   data: () => ({ typeInfo: {} }),
   computed: {
     typeStr() {
@@ -62,14 +69,28 @@ export default {
       this.$router.push({ name: 'all' });
     },
     linkHandler() {
+      this.$gtag.event('click_marketing_link', {
+        event_category: 'marketing',
+        event_label: 'gameCoach',
+        value: 'gameCoach'
+      });
       goMarketingLink();
     },
     _getTypeInfo(type) {
       return this.getTypeInfo(type);
     }
   },
+  setup(props) {
+    useMeta(computed(() => ({ title: ' | ' + props.mbti })));
+  },
   beforeMount() {
     this.typeInfo = this._getTypeInfo(this.typeStr);
+  },
+  mounted() {
+    this.$gtag.screenview({
+      app_name: 'mbti',
+      screen_name: String(this.mbti)
+    });
   }
 };
 </script>

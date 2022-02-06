@@ -35,7 +35,6 @@ export default {
   .rift-img {
     width: 1100px;
     padding-top: 400px;
-    height: fit-content;
     display: flex;
 
     animation-name: rift-float;

@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import api from '@/api';
 import { parseStr, goMarketingLink } from '@/utils';
 import LolButton from '@/components/lol/LolButton.vue';
 import LolLayout from '@/components/lol/LolLayout.vue';
@@ -39,6 +38,11 @@ export default {
       this.$router.push({ name: 'all' });
     },
     linkHandler() {
+      this.$gtag.event('click_marketing_link', {
+        event_category: 'marketing',
+        event_label: 'gameCoach',
+        value: 'gameCoach'
+      });
       goMarketingLink();
     }
   },

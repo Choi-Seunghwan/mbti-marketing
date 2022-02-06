@@ -67,7 +67,6 @@ export default {
     }
     &__img {
       width: 32px;
-      height: fit-content;
     }
 
     &__text {

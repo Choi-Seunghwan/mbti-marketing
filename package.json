@@ -9,6 +9,8 @@
     "axios": "^0.25.0",
     "moment": "^2.29.1",
     "vue": "^3.0.4",
+    "vue-gtag": "^2.0.1",
+    "vue-meta": "^3.0.0-alpha.2",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {

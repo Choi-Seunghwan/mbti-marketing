@@ -1,13 +1,23 @@
 <template>
   <footer class="footer">
     <div class="icons">
-      <a @click="linkHandler" target="_blank" class="social-icon-wrap">
+      <a @click="linkHandler('link')" target="_blank" class="social-icon-wrap">
         <img class="social-icon link" src="/img/icon/icon-link.png" alt="icon-github" />
       </a>
-      <a href="https://www.youtube.com/channel/UCQ_r1-C9izwMI4cs56y4u1w" target="_blank" class="social-icon-wrap">
+      <a
+        @click="linkHandler('youtube')"
+        href="https://www.youtube.com/channel/UCQ_r1-C9izwMI4cs56y4u1w"
+        target="_blank"
+        class="social-icon-wrap"
+      >
         <img class="social-icon youtube" src="/img/icon/icon-youtube.png" alt="icon-github" />
       </a>
-      <a href="https://github.com/Choi-Seunghwan" target="_blank" class="social-icon-wrap">
+      <a
+        @click="linkHandler('github')"
+        href="https://github.com/Choi-Seunghwan"
+        target="_blank"
+        class="social-icon-wrap"
+      >
         <img class="social-icon" src="/img/icon/icon-github.png" alt="icon-github" />
       </a>
     </div>
@@ -22,9 +32,33 @@ import alarm from '@/utils/Alarm.ts';
 export default {
   name: 'Footer',
   methods: {
-    linkHandler() {
-      alarm.showAlarm(parseStr('linkCopied'));
-      this.urlCopy();
+    linkHandler(type) {
+      switch (type) {
+        case 'link':
+          this.$gtag.event('click_social', {
+            event_category: 'social',
+            event_label: 'link',
+            value: 'link'
+          });
+
+          alarm.showAlarm(parseStr('linkCopied'));
+          this.urlCopy();
+          break;
+        case 'youtube':
+          this.$gtag.event('click_social', {
+            event_category: 'social',
+            event_label: 'youtube',
+            value: 'youtube'
+          });
+          break;
+        case 'github':
+          this.$gtag.event('click_social', {
+            event_category: 'social',
+            event_label: 'github',
+            value: 'github'
+          });
+          break;
+      }
     },
     urlCopy() {
       const el = document.createElement('textarea');
