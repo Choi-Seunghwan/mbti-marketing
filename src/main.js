@@ -12,7 +12,7 @@ app.use(
   VueGtag,
   {
     config: {
-      // id: import.meta.env.VITE_GA_TRACK,
+      id: import.meta.env.VITE_GA_TRACK,
       send_page_view: false
     }
   },
