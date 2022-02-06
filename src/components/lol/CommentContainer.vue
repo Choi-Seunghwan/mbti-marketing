@@ -87,6 +87,7 @@ export default {
     &__content {
       &__text {
         color: #eee;
+        overflow-wrap: anywhere;
       }
     }
   }

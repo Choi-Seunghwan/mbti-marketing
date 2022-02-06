@@ -5,7 +5,13 @@ import { mbtiType } from '@/types';
 import moment from 'moment';
 
 export const goMarketingLink = () => {
-  window.open('https://co.lvup.gg/?utm_source=sh_toy&utm_medium=webapp&utm_campaign=lolmbti', '_blank');
+  const url = String(import.meta.env.VITE_LINK_MARKETING);
+  console.log('@@@', url);
+  window.open(url, '_blank');
+};
+
+export const goLink = url => {
+  window.open(url, '_blank');
 };
 
 export const formatDatetime = datetime => {

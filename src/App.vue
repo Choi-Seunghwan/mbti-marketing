@@ -2,22 +2,36 @@
   <div class="app">
     <BackgroundWrap />
     <Header />
-    <div class="contents"><router-view /></div>
+    <div class="content">
+      <div class="content__inner">
+        <router-view />
+      </div>
+    </div>
+    <AlarmBar ref="alarm" />
     <Footer />
   </div>
 </template>
 
 <script>
+import alarm from '@/utils/Alarm.ts';
 import BackgroundWrap from '@/components/lol/BackgroundWrap.vue';
 import Header from '@/components/lol/Header.vue';
 import Footer from '@/components/lol/Footer.vue';
+import AlarmBar from '@/components/common/AlarmBar.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
     Footer,
-    BackgroundWrap
+    BackgroundWrap,
+    AlarmBar
+  },
+  mounted() {
+    this.$nextTick(() => {
+      const alarmBarNode = this.$refs.alarm;
+      alarm.setAlarmBarNode(alarmBarNode);
+    });
   }
 };
 </script>
@@ -25,11 +39,14 @@ export default {
 <style lang="scss">
 @import '@/assets/scss/base.scss';
 
-.contents {
+.content {
   width: 100%;
   margin-top: 40px;
-  margin: 40px 20px;
   min-height: 600px;
-  padding: 0 10px;
+  padding-bottom: 50px;
+
+  &__inner {
+    margin: 0 4px;
+  }
 }
 </style>

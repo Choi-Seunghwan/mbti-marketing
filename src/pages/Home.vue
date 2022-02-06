@@ -86,6 +86,9 @@ export default {
         color: #fff;
       }
     }
+    > p {
+      font-size: 16px;
+    }
   }
 
   .btn-wrap {
@@ -93,7 +96,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 60px;
 
     > hr {
       width: 100%;
@@ -110,6 +113,21 @@ export default {
       font-size: 14px;
       margin-bottom: 4px;
       color: #aaa;
+    }
+  }
+
+  @include view-m {
+    .title-wrap {
+      font-size: 18px;
+      > h3 {
+        font-size: 18px;
+        > em {
+          font-size: 24px;
+        }
+      }
+      > p {
+        font-size: 14px;
+      }
     }
   }
 }
