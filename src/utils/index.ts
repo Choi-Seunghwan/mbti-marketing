@@ -6,7 +6,6 @@ import moment from 'moment';
 
 export const goMarketingLink = () => {
   const url = String(import.meta.env.VITE_LINK_MARKETING);
-  console.log('@@@', url);
   window.open(url, '_blank');
 };
 

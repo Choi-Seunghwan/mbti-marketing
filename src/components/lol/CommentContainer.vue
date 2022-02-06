@@ -14,8 +14,11 @@
         <p class="comment-item__content__text">{{ comment.content }}</p>
       </div>
     </div>
-    <div v-if="hasNext" @click="getComments" class="more">
-      <span>더보기</span>
+    <div class="more-wrap">
+      <div v-if="loading" class="loading" />
+      <div v-if="hasNext && !loading" @click="getComments" class="more">
+        <LolBasicButton>더보기</LolBasicButton>
+      </div>
     </div>
   </div>
 </template>
@@ -23,8 +26,10 @@
 <script>
 import api from '@/api';
 import { formatDatetime } from '@/utils';
+import LolBasicButton from './LolBasicButton.vue';
 
 export default {
+  components: { LolBasicButton },
   name: 'CommentContainer',
   data: () => ({
     loading: true,
@@ -51,6 +56,12 @@ export default {
         console.log(e);
         this.hasNext = false;
       }
+    },
+    init() {
+      this.comments = [];
+      this.hasNext = true;
+      this.cursor = 0;
+      this.getComments();
     }
   },
   mounted() {
@@ -65,19 +76,26 @@ export default {
 .comments-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 8px;
+  min-height: 100px;
+
   .comment-item {
     border: unset;
     border-bottom: solid 1px #fff;
     padding-bottom: 4px;
     font-size: 12px;
+    margin-bottom: 12px;
 
     &__info {
       display: flex;
       justify-content: space-between;
+      padding-bottom: 4px;
+
       .name {
         color: #eee;
         margin-right: 4px;
+        font-weight: bold;
       }
       .date {
         color: #999;
@@ -92,7 +110,14 @@ export default {
     }
   }
 
-  .more {
+  .more-wrap {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .more {
+    }
   }
 }
 </style>

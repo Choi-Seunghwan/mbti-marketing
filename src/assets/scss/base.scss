@@ -1,9 +1,18 @@
 @import './border-animation.scss';
 @import './fog-animation.scss';
+@import './loading.scss';
 
 @font-face {
   font-family: 'NotoSansKR';
-  src: url('@/assets/font/NotoSansKr-Medium.otf');
+  src: url('@/assets/font/NotoSansKr-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url('@/assets/font/NotoSansKr-Bold.otf');
+  font-weight: bold;
 }
 
 $primary: #0bc6e3;
@@ -68,19 +77,24 @@ p {
 
 input,
 textarea {
-  background: rgba(#fff, 0.6);
   border: unset;
+  border-bottom: solid 1px #ccc;
+  background: rgba(#fff, 0.2);
   color: #191919;
   border-radius: 2px;
   font-size: 12px;
   padding: 4px 10px;
 
+  &::placeholder {
+    color: #333;
+  }
   &:focus {
-    border: unset;
+    border-bottom: solid #fff 1px;
   }
   &:focus-visible {
     border: unset;
     outline: unset;
+    border-bottom: solid #fff 1px;
   }
 }
 textarea {
@@ -113,7 +127,8 @@ pre {
   margin: 40px auto;
   height: 1px;
   border: unset;
-  border-top: solid 1px #fff;
+  padding: 0 10px;
+  border-top: solid 1px rgba(#fff, 0.8);
 
   &.small {
     width: 25%;

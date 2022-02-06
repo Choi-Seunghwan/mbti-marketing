@@ -18,7 +18,7 @@ export default {
 
       setTimeout(() => {
         this.show = false;
-      }, 800);
+      }, 1000);
     }
   }
 };
@@ -39,6 +39,7 @@ export default {
   justify-content: center;
   align-items: center;
   transition: bottom ease-in-out 0.3s;
+  backdrop-filter: blur(3px);
 
   > p {
     font-size: 16px;

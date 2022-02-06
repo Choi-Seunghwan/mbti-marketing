@@ -3,6 +3,10 @@
     <div class="top-wrap">
       <div class="btn-wrap">
         <LolArrowButton :disabled="!isActivatedPrevBtn" direction="left" @click="prevBtnHandler" />
+        <!-- <img class="progress-poro" src="/img/progress-poro.gif" /> -->
+        <div class="step">
+          <span>{{ step }}/{{ maxStep }}</span>
+        </div>
         <LolArrowButton :disabled="!isActivatedNextBtn" direction="right" @click="nextBtnHandler" />
       </div>
       <LolProgressBar v-bind="{ step, maxStep }" />
@@ -52,11 +56,15 @@ export default {
   .top-wrap {
     margin-bottom: 20px;
   }
-
   .btn-wrap {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+  }
+  .step {
+    font-size: 12px;
+    color: #aaa;
+    align-self: center;
   }
 }
 </style>

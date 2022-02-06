@@ -137,5 +137,8 @@ export default {
     opacity: 0.8;
     margin: 12px auto;
   }
+  .btn {
+    margin-bottom: 8px;
+  }
 }
 </style>

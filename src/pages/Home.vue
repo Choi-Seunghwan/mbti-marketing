@@ -43,8 +43,7 @@ export default {
     }
   },
   async mounted() {
-    const r = await api.get({ path: '/' });
-    console.log('@@@', r);
+    //
   }
 };
 </script>
@@ -114,6 +113,7 @@ export default {
       margin-bottom: 4px;
       color: #aaa;
     }
+    margin-bottom: 10px;
   }
 
   @include view-m {

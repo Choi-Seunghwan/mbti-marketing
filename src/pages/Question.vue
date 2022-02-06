@@ -30,6 +30,10 @@
         </LolButton>
       </div>
     </LolQuestionsLayout>
+    <div v-if="analyze" class="analyze-modal">
+      <img src="/img/progress-poro.gif" alt="poro" />
+      <p>{{ parseStr('underAnalyze') }}</p>
+    </div>
   </LolLayout>
 </template>
 
@@ -46,7 +50,8 @@ export default {
   data: () => ({
     step: 1, // non zero index, start 1
     questions: [],
-    answers: []
+    answers: [],
+    analyze: false
   }),
   computed: {
     _questions() {
@@ -64,8 +69,12 @@ export default {
     getLolQuestions,
     calculateAnswer,
     _calculateAnswer() {
+      this.analyze = true;
       const resultStr = this.calculateAnswer(this.answers, this.questions);
-      this.$router.push({ name: 'result', params: { mbti: resultStr } });
+
+      setTimeout(() => {
+        this.$router.push({ name: 'result', params: { mbti: resultStr } });
+      }, 1000);
     },
     goPrevStep() {
       this.step -= 1;
@@ -87,6 +96,7 @@ export default {
     }
   },
   mounted() {
+    this.analyze = false;
     this.questions = this.getLolQuestions();
   }
 };
@@ -118,7 +128,7 @@ export default {
     .answers {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 10px;
       margin-top: 40px;
 
       .answer-item {
@@ -141,6 +151,29 @@ export default {
   .go-result {
     .divider {
       margin: 18px 0;
+    }
+  }
+
+  .analyze-modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: rgba(#000, 0.8);
+    padding: 4px;
+    margin: auto;
+
+    > p {
+      text-align: center;
+    }
+    > img {
+      width: 160px;
+      height: fit-content;
     }
   }
 }

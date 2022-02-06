@@ -1,0 +1,21 @@
+.loading {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: loading-spin 1s ease-in-out infinite;
+  -webkit-animation: loading-spin 1s ease-in-out infinite;
+}
+
+@keyframes loading-spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loading-spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

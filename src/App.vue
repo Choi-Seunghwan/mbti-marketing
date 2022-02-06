@@ -2,8 +2,8 @@
   <div class="app">
     <BackgroundWrap />
     <Header />
-    <div class="content">
-      <div class="content__inner">
+    <div class="app-content">
+      <div class="app-content__inner">
         <router-view />
       </div>
     </div>
@@ -39,14 +39,17 @@ export default {
 <style lang="scss">
 @import '@/assets/scss/base.scss';
 
-.content {
-  width: 100%;
-  margin-top: 40px;
-  min-height: 600px;
-  padding-bottom: 50px;
+.app {
+  .app-content {
+    width: 100%;
+    margin-top: 40px;
+    min-height: 600px;
+    padding-bottom: 50px;
+    overflow: hidden;
 
-  &__inner {
-    margin: 0 4px;
+    &__inner {
+      margin: 0 4px;
+    }
   }
 }
 </style>

@@ -25,7 +25,7 @@ export default {
 
 .lol-progress-bar {
   width: 100%;
-  height: 4px;
+  height: 6px;
   position: relative;
   background: #aaa;
   border-radius: 6px;
@@ -35,7 +35,7 @@ export default {
     background: #0bc6e3;
     left: 0;
     top: 0;
-    height: 4px;
+    height: 6px;
     border-radius: 6px;
     transition: width ease-in-out 0.3s;
   }

@@ -12,17 +12,18 @@
       </div>
     </div>
     <hr class="divider" />
-    <HeadingText>왁자지껄</HeadingText>
+    <HeadingText>와글와글 왁자지껄</HeadingText>
     <div class="comments-wrap">
       <WriteComment @write="writeCommentHandler" />
-      <CommentsContainer class="comments-container" />
+      <CommentsContainer ref="commentContainer" class="comments-container" />
     </div>
   </LolLayout>
 </template>
 
 <script>
 import api from '@/api';
-import { getAllTypes, getSubChampImgSrc } from '@/utils';
+import alarm from '@/utils/Alarm.ts';
+import { getAllTypes, getSubChampImgSrc, parseStr } from '@/utils';
 import LolLayout from '@/components/lol/LolLayout.vue';
 import WriteComment from '@/components/lol/WriteComment.vue';
 import HeadingText from '@/components/lol/HeadingText.vue';
@@ -43,7 +44,15 @@ export default {
     },
     async writeCommentHandler(comment) {
       if (!comment.name || !comment.content) return;
-      await api.writeComment(comment);
+      try {
+        await api.writeComment(comment);
+        alarm.showAlarm(parseStr('writeComplete'));
+
+        const el = this.$refs?.commentContainer?.init?.();
+        el;
+      } catch (err) {
+        console.log(err);
+      }
     }
   },
   mounted() {
@@ -126,7 +135,6 @@ export default {
 
   .comments-wrap {
     background: rgba($white, 0.1);
-    min-height: 300px;
     padding: 30px 6px 6px 6px;
     border-radius: 4px;
     backdrop-filter: blur(4px);

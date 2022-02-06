@@ -38,7 +38,7 @@ export default {
   }
 
   &.dark {
-    background: rgba(#222, 0.8);
+    background: rgba(#222, 0.9);
     border: solid 1px #eee;
   }
 

@@ -11,7 +11,7 @@
         <img class="social-icon" src="/img/icon/icon-github.png" alt="icon-github" />
       </a>
     </div>
-    <!-- <p>개발자 최승환 <a>GitHub</a>, <a>Youtube</a></p> -->
+    <p>choiseunghwan.tech@gmail.com</p>
   </footer>
 </template>
 
@@ -53,12 +53,13 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      opacity: 0.9;
 
-      background: #eee;
+      background: rgba(#fff, 0.4);
+      backdrop-filter: blur(12px);
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
+      transition: background-color ease-in-out 0.2s;
 
       .social-icon {
         cursor: pointer;
@@ -66,17 +67,27 @@ export default {
         height: 42px;
 
         &.link {
-          width: 24px;
-          height: 24px;
+          width: 20px;
+          height: 20px;
         }
 
         &.youtube {
-          width: 30px;
-          height: 30px;
+          width: 28px;
+          height: 28px;
         }
+      }
+      &:hover {
+        background: rgba(#fff, 0.9);
       }
     }
   }
   margin-bottom: 40px;
+  > p {
+    font-size: 9px;
+    width: fit-content;
+    margin: 0 auto;
+    color: #bbb;
+    margin-top: 12px;
+  }
 }
 </style>
