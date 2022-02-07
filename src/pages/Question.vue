@@ -84,9 +84,9 @@ export default {
     },
     answerItemHandler(item, step) {
       this.$gtag.event('click_answer_item', {
-        event_category: 'question',
-        event_label: 'answer',
-        value: String(step) + String(item.id)
+        event_category: 'answer',
+        event_label: 'answer_v1',
+        value: `${step}-${item.id}`
       });
 
       const newAnswer = { ...item, step };

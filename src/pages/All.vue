@@ -5,7 +5,7 @@
     </div>
     <div class="all-types">
       <div @click="typeHandler(item)" class="type-item" v-for="(item, idx) in types" :key="idx">
-        <img class="type-item__img" :src="getSubChampImgSrc(item.champs[0].code)" />
+        <img class="type-item__img" :src="getCdnImgUrl(`img/champ-sub/${item.champs[0].code}.png`)" />
         <div class="type-item__text-wrap">
           <span class="type-item__text">{{ item.type }}</span>
         </div>
@@ -23,7 +23,7 @@
 <script>
 import api from '@/api';
 import alarm from '@/utils/Alarm.ts';
-import { getAllTypes, getSubChampImgSrc, parseStr } from '@/utils';
+import { getAllTypes, getCdnImgUrl, parseStr } from '@/utils';
 import LolLayout from '@/components/lol/LolLayout.vue';
 import WriteComment from '@/components/lol/WriteComment.vue';
 import HeadingText from '@/components/lol/HeadingText.vue';
@@ -37,7 +37,7 @@ export default {
   computed: {},
   methods: {
     getAllTypes,
-    getSubChampImgSrc,
+    getCdnImgUrl,
     typeHandler(item) {
       const { type } = item;
       this.$router.push({ name: 'result', params: { mbti: type } });

@@ -26,12 +26,9 @@ export const getLolQuestions = () => {
   return lolQuestions;
 };
 
-export const getChampImgSrc = champCode => {
-  return `/img/champ${champCode}.jpeg`;
-};
-
-export const getSubChampImgSrc = champCode => {
-  return `/img/champ-sub/${champCode}.png`;
+export const getCdnImgUrl = url => {
+  const _url = String(import.meta.env.VITE_CDN_URL) + `/${url}`;
+  return _url;
 };
 
 export const getAllTypes = (): mbtiType[] => {

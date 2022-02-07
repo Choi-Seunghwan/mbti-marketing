@@ -2,7 +2,7 @@
   <div class="champ-list">
     <div v-for="(champ, idx) in champList" :class="{ active: selectedIdx === idx }" :key="idx" class="selected-champ">
       <div class="selected-champ__img-wrap">
-        <img class="selected-champ__img" :src="`/img/champ/${champ.code}.jpeg`" />
+        <img class="selected-champ__img" :src="getCdnImgUrl(`img/champ/${champ.code}.jpeg`)" />
       </div>
       <div class="selected-champ__name">
         <span class="selected-champ__name__text">{{ champ.name }}</span>
@@ -18,13 +18,15 @@
         v-for="(champ, idx) in champList"
         :key="idx"
       >
-        <img class="champ-item__img" :src="`/img/champ-sub/${champ.code}.png`" />
+        <img class="champ-item__img" :src="getCdnImgUrl(`img/champ-sub/${champ.code}.png`)" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { getCdnImgUrl } from '@/utils';
+
 export default {
   name: 'ChampList',
   data: () => ({
@@ -49,6 +51,7 @@ export default {
     }
   },
   methods: {
+    getCdnImgUrl,
     // champsScroll() {
     //   const el = this.$el;
     //   const left = el?.scrollLeft;
