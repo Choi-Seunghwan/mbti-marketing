@@ -72,7 +72,7 @@ export default {
       this.$gtag.event('click_marketing_link', {
         event_category: 'marketing',
         event_label: 'gameCoach',
-        value: 'gameCoach'
+        marketing_link: 'gameCoach'
       });
       goMarketingLink();
     },

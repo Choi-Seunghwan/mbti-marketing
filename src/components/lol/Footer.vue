@@ -38,7 +38,7 @@ export default {
           this.$gtag.event('click_social', {
             event_category: 'social',
             event_label: 'link',
-            value: 'link'
+            social_link: 'link'
           });
 
           alarm.showAlarm(parseStr('linkCopied'));
@@ -48,14 +48,14 @@ export default {
           this.$gtag.event('click_social', {
             event_category: 'social',
             event_label: 'youtube',
-            value: 'youtube'
+            social_link: 'youtube'
           });
           break;
         case 'github':
           this.$gtag.event('click_social', {
             event_category: 'social',
             event_label: 'github',
-            value: 'github'
+            social_link: 'github'
           });
           break;
       }
