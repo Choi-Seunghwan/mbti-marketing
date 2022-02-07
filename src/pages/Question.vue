@@ -86,7 +86,7 @@ export default {
       this.$gtag.event('click_answer_item', {
         event_category: 'answer',
         event_label: 'answer_v1',
-        value: `${step}-${item.id}`
+        answer_item: `${step}-${item.id}`
       });
 
       const newAnswer = { ...item, step };
