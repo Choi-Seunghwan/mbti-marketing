@@ -1,5 +1,6 @@
 <template>
   <footer class="footer">
+    <AdSenseContainer></AdSenseContainer>
     <div class="icons">
       <a @click="linkHandler('link')" target="_blank" class="social-icon-wrap">
         <img class="social-icon link" src="/img/icon/icon-link.png" alt="icon-github" />
@@ -28,9 +29,11 @@
 <script>
 import { parseStr } from '@/utils';
 import alarm from '@/utils/Alarm.ts';
+import AdSenseContainer from '@/components/common/AdSenseContainer.vue';
 
 export default {
   name: 'Footer',
+  components: { AdSenseContainer },
   methods: {
     linkHandler(type) {
       switch (type) {

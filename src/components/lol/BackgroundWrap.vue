@@ -58,6 +58,7 @@ export default {
       width: 800px;
       align-self: flex-end;
       padding-top: 100px;
+      animation: unset;
     }
   }
 }
