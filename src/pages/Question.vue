@@ -74,7 +74,7 @@ export default {
 
       setTimeout(() => {
         this.$router.push({ name: 'result', params: { mbti: resultStr } });
-      }, 1000);
+      }, 1700);
     },
     goPrevStep() {
       this.step -= 1;
