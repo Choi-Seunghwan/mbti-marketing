@@ -1,6 +1,6 @@
 <template>
   <metainfo>
-    <template v-slot:title="{ content }">리그 오브 레전드 | MBTI 분석{{ content }}</template>
+    <template v-slot:title="{ content }">롤 MBTI 분석 | 리그 오브 레전드{{ content }}</template>
   </metainfo>
   <div class="app">
     <BackgroundWrap />
