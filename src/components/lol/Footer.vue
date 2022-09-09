@@ -41,11 +41,11 @@
 <script>
 import { parseStr } from '@/utils';
 import alarm from '@/utils/Alarm.ts';
-import AdSenseContainer from '@/components/common/AdSenseContainer.vue';
+// import AdSenseContainer from '@/components/common/AdSenseContainer.vue';
 
 export default {
   name: 'Footer',
-  components: { AdSenseContainer },
+  // components: { AdSenseContainer },
   methods: {
     linkHandler(type) {
       switch (type) {
